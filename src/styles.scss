@@ -1,0 +1,122 @@
+/* =========================
+   Base Reset
+========================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* =========================
+   Cart Block
+========================= */
+
+.cart {
+    width: 100%;
+    max-width: 700px;
+
+    &__container {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    }
+
+    &__header {
+        margin-bottom: 25px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__items {
+        list-style: none;
+    }
+
+    &__summary {
+        margin-top: 30px;
+        border-top: 1px solid #e0e0e0;
+        padding-top: 20px;
+    }
+
+    &__checkout-btn {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: #333;
+        }
+    }
+}
+
+/* =========================
+   Cart Item Block
+========================= */
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+
+    &__image img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    &__details {
+        flex: 1;
+        margin-left: 20px;
+    }
+
+    &__name {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    &__price {
+        font-size: 16px;
+        font-weight: 700;
+        margin-left: 20px;
+    }
+
+    &__qty {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: 12px;
+    }
+
+    &__remove {
+        background: none;
+        border: none;
+        color: #c00;
+        cursor: pointer;
+        margin-left: 12px;
+    }
+}
